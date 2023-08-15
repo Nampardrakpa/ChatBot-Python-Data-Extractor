@@ -43,14 +43,25 @@ python mostFrequent.py
 ## File Structure
 
 ChatBot-Python-Data-Extractor/
+
                               │
+                              
                               ├── json/
+                              
                               │   ├── conversations.json
+                              
                               │   ├── extracted_user_content.json
+                              
                               │   └── ...other JSON files...
+                              
                               │
+                              
                               └── python/
+                              
                                   ├── conversationExtractor.py
+                                  
                                   ├── mostFrequent.py
+                                  
                                   ├── dateFinder.py
+                                  
                                   └── requirements.txt
