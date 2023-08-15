@@ -14,13 +14,16 @@ questions_by_date = defaultdict(int)
 
 # Iterate through conversations and messages to count questions by date
 for conversation in data['conversations']:
+    is_new_question = True
     for message in conversation['messages']:
-        if message['role'] == 'user' and '?' in message['content']:
+        if message['role'] == 'user':
             # Extract the date from the conversation's created_at field
             created_at = conversation.get('created_at', '')
             if created_at:
                 date = created_at[:10]
-                questions_by_date[date] += 1
+                if is_new_question:
+                    questions_by_date[date] += 1
+                is_new_question = True
 
 # Convert the dictionary to a list of dictionaries for JSON format
 result = [{'date': date, 'question_count': count} for date, count in questions_by_date.items()]
