@@ -8,7 +8,9 @@ To use these scripts, follow the steps below:
 
 1. Clone the repository to your local machine:
 
-git clone https://github.com/your-username/your-repo.git
+/
+  |
+  git clone https://github.com/your-username/your-repo.git
 
 ## Requirements
 
